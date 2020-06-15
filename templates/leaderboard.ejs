@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>LeaderBoard for <%=contest.name%> </h1>
+
+
+    <table style="width:100%">
+         <tr>
+            <td><b>Name</b></td>
+            <%for(let i=0;i<contest.problemName.length;i++){%>
+              <td><%=contest.problemName[i]%></td>
+            <%}%>
+         </tr>
+<!--
+         <% for(var i=0;i<list.length;i++){ %>
+
+             <%for(let j=0;j<list[i].Users.length;j++){%>
+               <tr>
+               <td><%=list[i].Users[j].handle %></td>
+               <%for(let k=0;k<list[i].Users[j].problem.length;k++){%>
+                 <td><%=list[i].Users[j].problem[k]%></td>
+               </tr>
+               <%}%>
+             <%}%>
+         <%}%> -->
+
+         <%for(let i=0;i<list.length;i++){%>
+           <%for(let j=0;j<list[i].Users.length;j++){%>
+             <tr>
+             <td><%=list[i].Users[j].handle%></td>
+             <%for(let k=0;k<list[i].Users[j].problem.length;k++){%>
+               <td><%=list[i].Users[j].problem[k]%></td>
+             <%}%>
+           </tr>
+           <%}%>
+         <%}%>
+
+
+
+      </table>
+
+    </br>
+
+
+
+
+
+
+    <a href="/">Back to Home Page </a>
+  </body>
+</html>
